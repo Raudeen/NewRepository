@@ -1,6 +1,5 @@
 package com.example.buysell;
 
-import com.example.buysell.model.Product;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

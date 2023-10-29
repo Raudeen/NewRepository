@@ -4,7 +4,7 @@
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1 style="color: blue">BUYSELL</h1><hr>
 <#if user.email??>
     <h3>Имя пользователя: <i>${user.name}</i></h3>
     <form action="/logout" method="post">
@@ -12,7 +12,10 @@
         <input type="submit" value="Выйти"/>
     </form>
 <#else>
-    <a href="/login">Войти</a></h1>
+    <a href="/login">Войти</a>
+</#if>
+<#if user.isAdmin()>
+    <a href="/admin">Панель администратора</a>
 </#if>
 <hr>
 <h4>Товары со всей России</h4>

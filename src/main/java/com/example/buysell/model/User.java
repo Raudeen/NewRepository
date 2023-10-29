@@ -39,6 +39,10 @@ public class User implements UserDetails {
     private List<Product> products = new ArrayList<>();
     private LocalDateTime dateOfCreated;
 
+    public boolean isAdmin(){
+        return roles.contains(Role.ROLE_ADMIN);
+    }
+
     @PrePersist
     private void init() {
         dateOfCreated = LocalDateTime.now();
